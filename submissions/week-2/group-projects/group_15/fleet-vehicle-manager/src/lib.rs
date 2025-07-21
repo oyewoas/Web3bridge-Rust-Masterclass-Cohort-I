@@ -1,7 +1,7 @@
 pub mod models;
 pub mod registry;
-pub mod ui;
 pub mod tests;
+pub mod ui;
 
 pub use models::*;
 pub use registry::*;
