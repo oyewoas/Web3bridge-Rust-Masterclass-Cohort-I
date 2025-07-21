@@ -84,10 +84,12 @@ impl VehiclesRegistry {
     }
 
     pub fn view_vehicles(&self) -> &[Vehicle] {
+        // view all vehicles
         &self.fleet_vehicles
     }
 
     pub fn view_vehicle(&self, license_plate: String) -> Result<&Vehicle, String> {
+        // view a vehicle by license plate
         self.fleet_vehicles_license_plate
             .get(&license_plate)
             .ok_or_else(|| format!("Vehicle with license plate {} not found", license_plate))
