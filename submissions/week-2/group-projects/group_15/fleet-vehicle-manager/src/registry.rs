@@ -218,6 +218,7 @@ impl VehiclesRegistry {
                 return Err("User not found.".to_string());
             }
         } else {
+            // Return error if user is not logged in
             return Err("You must log in first.".to_string());
         }
     }
